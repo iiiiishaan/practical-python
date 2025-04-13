@@ -1,11 +1,14 @@
 
+import csv
+
 total_cost = 0.0
 file = open("/home/ishaan/practical-python/Work/Data/portfolio.csv", "rt")
-headers = next(file).split(',')
+rows = csv.reader(file)
+headers = next(rows)
 headers
 
-for line in file:
-	row = line.split(",")
+for row in rows:
+	
 	print(row)
 
 
